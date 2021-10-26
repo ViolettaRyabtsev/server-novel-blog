@@ -1,0 +1,14 @@
+version: "3"
+services:
+  web:
+    image: wonderviolet/server
+    build: .
+    command: "node server.js"
+    ports:
+      - "10000:5000"
+    depends_on:
+      - "mongo"
+  mongo:
+    image: "wonderviolet/mongo"
+    ports:
+      - "27017:27017"
