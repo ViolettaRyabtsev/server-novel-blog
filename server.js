@@ -11,10 +11,11 @@ app.use(cors());
 app.use(urlencoded({ extended: true }));
 app.use(json());
 
-
+//172.31.83.78  ?
 mongoose.connect("mongodb://mongo:27017/writing-blog", {
   useNewUrlParser: true,
 });
+
 
 //schema
 const CommentSchema = mongoose.Schema({
